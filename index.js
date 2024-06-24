@@ -1,6 +1,8 @@
 let numero1
 let numero2
 
+console.log("Digite 2 números para calcular o MMC e o MDC deles:")
+
 process.stdin.on("data", function(data) {
     let input = +data.toString().trim()
 
@@ -33,14 +35,11 @@ process.stdin.on("data", function(data) {
         i = menor
 
         for(i; i > 0; i--) {
-            if(numero1 % i == 0 && numero2 % i ==0) {
+            if(numero1 % i == 0 && numero2 % i == 0) {
                 console.log("MDC: " + i)
                 break;
             }
         }
-        
-        process.exit()
-
-
+                process.exit()
     }
 })
